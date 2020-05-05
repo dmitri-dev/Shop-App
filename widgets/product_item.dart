@@ -1,8 +1,11 @@
+import '../providers/product.dart';
+import 'package:provider/provider.dart';
+
 import '../screens/product_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductItem extends StatelessWidget {
-  final String id;
+  /*final String id;
   final String title;
   final String imageUrl;
 
@@ -10,10 +13,11 @@ class ProductItem extends StatelessWidget {
     this.id,
     this.title,
     this.imageUrl,
-  );
+  );*/
 
   @override
   Widget build(BuildContext context) {
+    final product = Provider.of<Product>(context);
     Color primaryColor = Theme.of(context).primaryColor;
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
@@ -22,23 +26,27 @@ class ProductItem extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pushNamed(
               ProductDetailScreen.routeName,
-              arguments: id,
+              arguments: product.id,
             );
           },
           child: Image.network(
-            imageUrl,
+            product.imageUrl,
             fit: BoxFit.cover,
           ),
         ),
         footer: GridTileBar(
           backgroundColor: Colors.black54,
           leading: IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
+            icon: Icon(
+              product.isFavorite ? Icons.favorite : Icons.favorite_border,
+            ),
+            onPressed: () {
+              product.toggleFavoriteStatus();
+            },
             color: primaryColor,
           ),
           title: Text(
-            title,
+            product.title,
             style: Theme.of(context).textTheme.body2,
             textAlign: TextAlign.center,
           ),
