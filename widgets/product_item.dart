@@ -17,7 +17,7 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context, listen: false);
-    Color primaryColor = Theme.of(context).primaryColor;
+    final primaryColor = Theme.of(context).primaryColor;
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: GridTile(
