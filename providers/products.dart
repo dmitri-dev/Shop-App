@@ -1,4 +1,3 @@
-
 import 'product.dart';
 import 'package:flutter/material.dart';
 
@@ -6,40 +5,40 @@ class Products with ChangeNotifier {
   List<Product> _items = [
     Product(
       id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
-      price: 29.99,
+      title: 'Hope Diamond',
+      description: 'Yowza!',
+      price: 300000000.00,
       imageUrl:
-      'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://www.telegraph.co.uk/content/dam/luxury/spark/harry-winston/hope-diamond-necklace-2-xlarge.jpg?imwidth=1200',
     ),
     Product(
       id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
-      price: 59.99,
+      title: 'Tom Brady\'s Used Jockstrap',
+      description: 'fair condition',
+      price: 420.00,
       imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://66.media.tumblr.com/57b0e0aa94169b50fb7313e5b815957e/tumblr_p6dzayVaCq1wyvrcao1_1280.jpg',
     ),
     Product(
       id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
+      title: 'Android Housekeeper',
+      description: 'I am looking for John Connor',
       price: 19.99,
       imageUrl:
-      'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+          'https://cdn.vox-cdn.com/thumbor/Et4R6LdLlEehUShCoP8AoQ6CiW8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/assets/4658579/terminator_endoskeleton_1020.jpg',
     ),
     Product(
       id: 'p4',
-      title: 'A Pan',
-      description: 'Prepare any meal you want.',
-      price: 49.99,
+      title: 'Lamborghini Aventador LP-700',
+      description: 'I am speed!',
+      price: 300000.00,
       imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
+          'https://longislandexoticcars.com/wp-content/uploads/2019/03/2149_main_l-762x456.jpg',
     ),
   ];
 
 //  var _showFavoritesOnly = false;
-  
+
   List<Product> get items {
 //    if (_showFavoritesOnly) {
 //      return _items.where((item) => item.isFavorite).toList();
