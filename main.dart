@@ -2,6 +2,7 @@ import 'providers/cart.dart';
 import 'providers/products.dart';
 import 'screens/product_detail_screen.dart';
 import 'screens/products_overview_screen.dart';
+import 'screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Anton'),
             body2: TextStyle(
-                color: Colors.white70,
+                color: Theme.of(context).primaryColor,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Lato'),
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         home: MyHomePage(),
         routes: {
           ProductDetailScreen.routeName: (_) => ProductDetailScreen(),
+          CartScreen.routeName: (_) => CartScreen(),
         },
       ),
     );
