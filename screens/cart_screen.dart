@@ -1,4 +1,4 @@
-
+import '../providers/orders.dart';
 import '../providers/cart.dart' show Cart;
 import '../widgets/cart_item.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,13 @@ class CartScreen extends StatelessWidget {
                       width: 2,
                       color: Theme.of(context).primaryColor,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Provider.of<Orders>(context, listen: false).addOrder(
+                        cart.items.values.toList(),
+                        cart.totalAmount,
+                      );
+                      cart.clear();
+                    },
                     child: Text(
                       'CHECKOUT',
                       style: Theme.of(context).textTheme.body2.copyWith(
