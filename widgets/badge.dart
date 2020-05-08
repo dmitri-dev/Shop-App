@@ -22,16 +22,14 @@ class Badge extends StatelessWidget {
         child,
         Positioned(
           right: 8,
-          top: 8,
+          top: 6,
           child: Container(
             padding: EdgeInsets.all(2.0),
-//             color: Theme.of(context).accentColor,
             decoration: BoxDecoration(
               border: Border.all(
                 width: 2,
                 style: BorderStyle.solid,
               ),
-              borderRadius: BorderRadius.circular(10),
               color: color != null ? color : Theme.of(context).primaryColor,
             ),
             constraints: BoxConstraints(
