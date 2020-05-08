@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class Badge extends StatelessWidget {
   const Badge({
@@ -23,21 +25,27 @@ class Badge extends StatelessWidget {
           top: 8,
           child: Container(
             padding: EdgeInsets.all(2.0),
-            // color: Theme.of(context).accentColor,
+//             color: Theme.of(context).accentColor,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: color != null ? color : Theme.of(context).accentColor,
+              border: Border.all(
+                width: 2,
+                style: BorderStyle.solid,
+              ),
+              borderRadius: BorderRadius.circular(10),
+              color: color != null ? color : Theme.of(context).primaryColor,
             ),
             constraints: BoxConstraints(
               minWidth: 16,
-              minHeight: 16,
+              minHeight: 10,
+              maxHeight: 25,
             ),
             child: Text(
               value,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 10,
-              ),
+              style: Theme.of(context).textTheme.body2.copyWith(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
             ),
           ),
         )

@@ -23,7 +23,7 @@ class Products with ChangeNotifier {
       id: 'p3',
       title: 'Android Housekeeper',
       description: 'I am looking for John Connor',
-      price: 19.99,
+      price: 199.99,
       imageUrl:
           'https://cdn.vox-cdn.com/thumbor/Et4R6LdLlEehUShCoP8AoQ6CiW8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/assets/4658579/terminator_endoskeleton_1020.jpg',
     ),

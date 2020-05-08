@@ -17,7 +17,6 @@ class ProductsOverviewScreen extends StatefulWidget {
 
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   var _showOnlyFavorites = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +38,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             },
             icon: Icon(
               Icons.more_vert,
+              size: 35,
             ),
             itemBuilder: (_) => [
               PopupMenuItem(
@@ -59,6 +59,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             child: IconButton(
                 icon: Icon(
                   Icons.shopping_cart,
+                  size: 35,
                 ),
                 onPressed: () {
                   Navigator.of(context).pushNamed(CartScreen.routeName);

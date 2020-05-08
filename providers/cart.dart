@@ -5,12 +5,14 @@ class CartItem {
   final String title;
   final double price;
   final int quantity;
+  final String imageUrl;
 
   CartItem({
     @required this.id,
     @required this.title,
     @required this.price,
     @required this.quantity,
+    @required this.imageUrl,
   });
 }
 
@@ -37,6 +39,7 @@ class Cart with ChangeNotifier {
     String id,
     String title,
     double price,
+    String image,
   ) {
     if (_items.containsKey(id)) {
       _items.update(
@@ -46,6 +49,7 @@ class Cart with ChangeNotifier {
           title: existingCartItem.title,
           price: existingCartItem.price,
           quantity: existingCartItem.quantity + 1,
+          imageUrl: existingCartItem.imageUrl,
         ),
       );
     } else {
@@ -56,9 +60,15 @@ class Cart with ChangeNotifier {
           title: title,
           price: price,
           quantity: 1,
+          imageUrl: image,
         ),
       );
     }
+    notifyListeners();
+  }
+
+  void removeItem(String productId) {
+    _items.remove(productId);
     notifyListeners();
   }
 }

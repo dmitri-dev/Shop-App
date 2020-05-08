@@ -50,7 +50,9 @@ class ProductItem extends StatelessWidget {
           ),
           title: Text(
             product.title,
-            style: Theme.of(context).textTheme.body2,
+            style: Theme.of(context).textTheme.body2.copyWith(
+                  color: Theme.of(context).primaryColor,
+                ),
             textAlign: TextAlign.center,
           ),
           trailing: IconButton(
@@ -58,7 +60,12 @@ class ProductItem extends StatelessWidget {
               Icons.add_shopping_cart,
             ),
             onPressed: () {
-              cart.addItem(product.id, product.title, product.price);
+              cart.addItem(
+                product.id,
+                product.title,
+                product.price,
+                product.imageUrl,
+              );
             },
             color: primaryColor,
           ),
