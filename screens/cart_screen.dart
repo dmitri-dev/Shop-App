@@ -1,8 +1,9 @@
-import '../providers/orders.dart';
-import '../providers/cart.dart' show Cart;
-import '../widgets/cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../providers/orders.dart';
+import '../providers/cart.dart' show Cart;
+import '../screens/orders_screen.dart';
+import '../widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
   static const routeName = '/cart';
@@ -34,7 +35,7 @@ class CartScreen extends StatelessWidget {
                         color: Theme.of(context).primaryColor, fontSize: 20),
                   ),
                   Chip(
-                    label: Text('\$${cart.totalAmount}'),
+                    label: Text('\$${cart.totalAmount.toStringAsFixed(2)}'),
                     backgroundColor: Theme.of(context).primaryColor,
                   ),
                   OutlineButton(
@@ -52,9 +53,12 @@ class CartScreen extends StatelessWidget {
                         cart.totalAmount,
                       );
                       cart.clear();
+                      Navigator.of(context).pushReplacementNamed(
+                        OrdersScreen.routeName,
+                      );
                     },
                     child: Text(
-                      'CHECKOUT',
+                      'ORDER',
                       style: Theme.of(context).textTheme.body2.copyWith(
                             color: Theme.of(context).primaryColor,
                           ),

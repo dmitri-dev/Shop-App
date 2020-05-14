@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
-
-import '../providers/products.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../providers/products.dart';
 
 class ProductDetailScreen extends StatelessWidget {
 /*

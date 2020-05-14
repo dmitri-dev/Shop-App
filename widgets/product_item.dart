@@ -1,8 +1,8 @@
+import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
 import '../providers/cart.dart';
 import '../providers/product.dart';
 import '../screens/product_detail_screen.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter/material.dart';
 
 class ProductItem extends StatelessWidget {
   /*final String id;
@@ -65,6 +65,21 @@ class ProductItem extends StatelessWidget {
                 product.title,
                 product.price,
                 product.imageUrl,
+              );
+              Scaffold.of(context).hideCurrentSnackBar();
+              Scaffold.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Add item to cart',
+                  ),
+                  duration: Duration(seconds: 2),
+                  action: SnackBarAction(
+                    label: 'UNDO',
+                    onPressed: () {
+                      cart.removeSingleItem(product.id);
+                    },
+                  ),
+                ),
               );
             },
             color: primaryColor,

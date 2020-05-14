@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'providers/orders.dart';
 import 'providers/cart.dart';
 import 'providers/products.dart';
@@ -5,8 +7,7 @@ import 'screens/product_detail_screen.dart';
 import 'screens/products_overview_screen.dart';
 import 'screens/cart_screen.dart';
 import 'screens/orders_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'screens/user_products_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Anton',
             ),
             body2: TextStyle(
-              color: Theme.of(context).primaryColor,
+              color: Colors.black,
               fontSize: 18,
               fontWeight: FontWeight.bold,
               fontFamily: 'Lato',
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
           ProductDetailScreen.routeName: (_) => ProductDetailScreen(),
           CartScreen.routeName: (_) => CartScreen(),
           OrdersScreen.routeName: (_) => OrdersScreen(),
+          UserProductsScreen.routeName: (_) => UserProductsScreen(),
         },
       ),
     );
