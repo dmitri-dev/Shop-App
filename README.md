@@ -1,7 +1,7 @@
 # Shop-App
 
 ![Product Overview Screen](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592842492.png)
-![Product Details Screen](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592842538.png)
+![Product Details Screen](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592856466.png)
 ![My Products Screen](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592842664.png)
 ![Edit Products Screen](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592842819.png)
 ![App Drawer](https://github.com/dmitri-dev/Shop-App/blob/master/Screenshots/Screenshot_1592842819.png)
